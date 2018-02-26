@@ -1,5 +1,5 @@
 '''
-this is obtained and slightly modified from
+this code is obtained and slightly modified from
 https://github.com/fastai/courses/blob/master/deeplearning2/vgg16_avg.py
 '''
 from __future__ import print_function
