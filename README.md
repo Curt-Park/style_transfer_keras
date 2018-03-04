@@ -79,7 +79,7 @@ The attempt to reproduce Figure 3 of the paper, which renders a photograph of th
 
 Top Row (left to right): [No style](images/content/tubingen.jpg), [The Shipwreck of the Minotaur](images/style/shipwreck.jpg), [The Starry Night](images/style/starry-night.jpg)
 
-Bottom Row (left to right): [Composition VII](images/style/kandinsky.jpg), [The Scream](images/style/the_scream.jpg), [Seated Nude](seated-nude.jpg)
+Bottom Row (left to right): [Composition VII](images/style/kandinsky.jpg), [The Scream](images/style/the_scream.jpg), [Seated Nude](images/style/seated-nude.jpg)
 
 
 ## References
