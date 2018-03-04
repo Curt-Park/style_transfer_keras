@@ -10,7 +10,7 @@ All differences are marked with comments that start with '! the original paper .
 - The loss function for style representations: It is divided by (2. *  feature map size * channel number).
 - The initial canvas: It is initialized by a content image.
 
-They make better results on my implementation rather than the settings suggested by the original paper, emprirically.
+They make better results on my implementation rather than the settings suggested by the original paper, empirically.
 
 ## Developed with
 - Keras 2.1.2
