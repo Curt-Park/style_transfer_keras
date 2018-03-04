@@ -83,10 +83,10 @@ Bottom Row (left to right): [Composition VII](images/style/kandinsky.jpg), [The 
 
 
 ## References
-#### Paper
+### Paper
 - [Image Style Transfer Using Convolutional Neural Networks](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf) by Leon A. Gatys, Alexander S. Ecker, Matthias Bethge
 
-#### Implementation
+### Implementation
 - [Keras examples](https://github.com/keras-team/keras/blob/master/examples/neural_style_transfer.py) by Keras Team
 - [Keras based Neural Style Transfer](https://github.com/giuseppebonaccorso/Neural_Artistic_Style_Transfer) by giuseppebonaccorso
 - [Fast AI's Deep learning course](https://github.com/fastai/courses/blob/master/deeplearning2/neural-style.ipynb) by Fast AI
