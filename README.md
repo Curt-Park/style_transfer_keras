@@ -1,6 +1,6 @@
 # Style Transfer with Keras
 
-This is a Keras implementation of a style transfer technique described in the following paper:
+This is a Keras implementation of style transfer techniques described in the following paper:
 - [Image Style Transfer Using Convolutional Neural Networks](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf) by Leon A. Gatys, Alexander S. Ecker, Matthias Bethge
 
 ## Differences from the paper
@@ -8,7 +8,7 @@ This is a Keras implementation of a style transfer technique described in the fo
 All differences are marked with comments that start with '! the original paper ...'
 - The CNN Model: VGG16 is used instead of VGG19. 
 - The loss function for style representations: It is divided by (2. *  feature map size * channel number).
-- The initial canvas: It is initialized by a content image.
+- The initial canvas: a content image.
 
 They make better results on my implementation rather than the settings suggested by the original paper, empirically.
 
