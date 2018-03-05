@@ -1,9 +1,9 @@
-'''
+"""
 Title: Keras implementation of Style-Transfer
 Paper: https://goo.gl/KDiquz
 Author: Jinwoo Park (Curt)
 Email: www.jwpark.co.kr@gmail.com
-'''
+"""
 import time
 import argparse
 import numpy as np
@@ -30,23 +30,46 @@ DEFAULT_STYLE_LAYERS = ['block1_conv1',
 np.random.seed(777)
 
 class StyleTransfer(object):
-    '''
-    Usage:
-        style_transfer = StyleTransfer(...)
-        style_transfer.fit(...)
-    '''
+    """Style-Transfer techniques described in the following paper: https://goo.gl/KDiquz
+
+    Differences from the original paper are marked with comments
+    which start with "! the original paper ...."
+
+    Attributes:
+        output_path (str): the directory path for outcomes.
+        save_every_n_iters (int): save images every n iteration.
+        initial_canvas (str): the initial canvas for generated images.
+                              Choice in {'random', 'content', 'style'}
+        verbose (bool): True for print states, False otherwise.
+        step (int): store the training step to print out logs.
+        img_shape (tuple): 3D array of shape (H, W, 3)
+        content_img (np.ndarray): 4D array of shape (1, H, W, 3)
+        style_img (np.ndarray): 4D array of shape (1, H, W, 3)
+        eval_fn (keras.backend.function): keras function to return training loss and gradients.
+
+    Example:
+        style_transfer = StyleTransfer(...) # initialization
+        style_transfer.fit(...) # generating images
+    """
     def __init__(self, content_path, style_path, output_path,
                  loss_ratio=1e-3, verbose=True,
                  save_every_n_iters=10, initial_canvas='content'):
-        '''
-        Arguments:
-            content_image_path: The path for the content image
-            style_image_path: The path for the style image
-            iter_n: iteration number for reconstruction
-            loss_ratio: alpha / beta (beta = 1)
-            verbose: print loss values
-            save_every_n_steps: save images at every n steps
-        '''
+        """ intialize all things for style transfer
+
+        the overall process is as follows:
+            1. image preprocessing
+            2. define loss functions for content representations and style representations
+            3. define evaluation function for training loss and gradients
+
+        Args:
+            content_image_path (str): The path for the content image
+            style_image_path (str): The path for the style image
+            loss_ratio (float): alpha divided by beta (beta is defined as 1)
+            verbose (bool): True for print states, False otherwise
+            save_every_n_steps: save images every n steps
+            initial_canvas (str): the initial canvas for generated images.
+                                  Choice in {'random', 'content', 'style'}
+        """
         self.output_path = output_path
         self.save_every_n_iters = save_every_n_iters
         self.initial_canvas = initial_canvas
@@ -121,9 +144,16 @@ class StyleTransfer(object):
         self.eval_fn = K.function([generated_img], [total_loss, content_loss, style_loss]+grads)
 
     def fit(self, iteration=1000):
-        '''
-        generate a style-transfered image
-        '''
+        """ generate a style-transfered image.
+
+        The overall process is as follows:
+            1. initiating the initial canvas
+            2. setting Evaluator
+            3. optimizing using L-BFGS method
+
+        Args:
+            iteration (int): the total iteration number of optimization
+        """
 
         if self.initial_canvas == 'random':
             generated_img = utils.preproc(np.random.uniform(0, 255, size=self.img_shape)\
@@ -164,24 +194,31 @@ class StyleTransfer(object):
                                  self.output_path, 'generated_%d' % (i) + '.jpg')
 
     def _callback(self, _):
-        '''
-        callback function to print out the time step
-        '''
+        """ callback function to print out the each time step in optimization process
+
+        Args:
+            _ (list): parameter vector which is not used here
+        """
         self.step += 1
 
         if self.verbose:
             print('step %d is done...' % (self.step))
 
 def get_argument_parser():
-    '''
-    Argument parser which returns the options which the user inputted.
-
-    Args:
-        None
+    """ Argument parser which returns the options which the user inputted.
 
     Returns:
         argparse.ArgumentParser().parse_args()
-    '''
+            which contains the following parameters:
+                content (str): content image path
+                style (str): style image path
+                output (str): output directory path
+                iteration (int): total iteration number
+                loss_ratio (float): loss ratio of content weight divided by style weight
+                initialization (string): the inital canvas
+                save_image_every_nth (int): save images at every nth the iteration
+                verbose (bool): True for printing out the states, False otherwise
+    """
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--content',
@@ -214,9 +251,13 @@ def get_argument_parser():
     return args
 
 def main():
-    '''
-    this function is called when this script starts
-    '''
+    """ this function is called when this script starts
+
+    the overall process is as follows:
+        1. parse input parameters through argument paser
+        2. initiate a StyleTranfer object
+        3. generate images
+    """
     args = get_argument_parser()
     style_transfer = StyleTransfer(content_path=args.content,
                                    style_path=args.style,
