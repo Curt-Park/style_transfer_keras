@@ -96,13 +96,13 @@ These are more trials on my son's photo. As above, the generating progress video
 <p align="center">
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=AqL7rVArnjk
          " target="_blank"><img src="images/results/myson_hokusai.jpg" height="192px"></a>
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=8CDCtT98Zm8
-         " target="_blank"><img src="images/results/myson_song.jpg" height="192px"></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=q1WJWg8HRQg
+         " target="_blank"><img src="images/results/myson_hunminjungum.jpg" height="192px"></a>
 </p>
 
 Top Row (left to right): [No style](images/content/my_son.JPG), [Girl before a mirror](images/style/girl_before_a_mirror.jpg)
 
-Bottom Row (left to right): [Hokusai](images/style/hokusai.jpg), [보상받지 못한 존재에 대하여](images/style/song.jpg)
+Bottom Row (left to right): [Hokusai](images/style/hokusai.jpg), [훈민정음](images/style/hunminjungum.jpg)
 
 ## References
 ### Paper
