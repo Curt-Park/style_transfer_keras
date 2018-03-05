@@ -69,6 +69,9 @@ The attempt to reproduce Figure 3 of the paper, which renders a photograph of th
          " target="_blank"><img src="images/results/tubingen_shipwreck.jpg" height="192px"></a>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=Mdw70lntGaI
          " target="_blank"><img src="images/results/tubingen_starrynigt.jpg" height="192px"></a>
+</p>
+
+<p align="center">
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=aq217zlyBlc
          " target="_blank"><img src="images/results/tubingen_kandinsky.jpg" height="192px"></a>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=l-I0gU3CrG0
@@ -81,6 +84,25 @@ Top Row (left to right): [No style](images/content/tubingen.jpg), [The Shipwreck
 
 Bottom Row (left to right): [Composition VII](images/style/kandinsky.jpg), [The Scream](images/style/the_scream.jpg), [Seated Nude](images/style/seated-nude.jpg)
 
+### More trials
+These are more trials on my son's photo. As above, the generating progress videos are played by clicking the images.
+
+<p align="center">
+<img src="images/content/my_son.JPG" height="192px">
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=WLvGm49B5Vo
+         " target="_blank"><img src="images/results/myson_girlbeforeamirror.jpg" height="192px"></a>
+</p>
+
+<p align="center">
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=AqL7rVArnjk
+         " target="_blank"><img src="images/results/myson_hokusai.jpg" height="192px"></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=8CDCtT98Zm8
+         " target="_blank"><img src="images/results/myson_song.jpg" height="192px"></a>
+</p>
+
+Top Row (left to right): [No style](images/content/my_son.JPG), [Girl before a mirror](images/style/girl_before_a_mirror.jpg)
+
+Bottom Row (left to right): [Hokusai](images/style/hokusai.jpg), [보상받지 못한 존재에 대하여](images/style/song.jpg)
 
 ## References
 ### Paper
