@@ -85,7 +85,7 @@ Top Row (left to right): [No style](images/content/tubingen.jpg), [The Shipwreck
 Bottom Row (left to right): [Composition VII](images/style/kandinsky.jpg), [The Scream](images/style/the_scream.jpg), [Seated Nude](images/style/seated-nude.jpg)
 
 ### More trials
-These are more trials on my son's photo. As above, the generating progress videos are played by clicking the images.
+These are more trials on my son's photo. As above, the generating progress videos will be played by clicking the images.
 
 <p align="center">
 <img src="images/content/my_son.JPG" height="192px">
