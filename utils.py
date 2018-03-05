@@ -32,7 +32,7 @@ class Evaluator(object):
         """ stores content_loss and style_loss as its member variables and returns loss
 
         Args:
-            img (list): flatten image array
+            img (np.ndarray): flatten array
 
         Returns:
             np.ndarray (np.float64): training loss
@@ -57,7 +57,7 @@ def preproc(img):
     """ Normalize 'img' and expand dim from 3D to 4D array
 
     Args:
-        img (np.ndarray): 3D RGB array of shape (H, W, 3)
+        img (PIL.Image): 3D RGB array of shape (H, W, 3)
 
     returns:
         np.ndarray: 4D BGR array of shape (1, H, W, 3) or (1, 3, H, W)
@@ -126,7 +126,7 @@ def gram_matrix(features):
     """ make a gramian matrix from the input feature map
 
     Args:
-        features (tensor): feature representations of shape (H, W, C) or (C, H, W)
+        features (tensor or variable): feature representations of shape (H, W, C) or (C, H, W)
 
     Returns:
         a gramian matrix of shape (C, C)
@@ -144,7 +144,7 @@ def get_feat_channel_size(features):
     """ returns feature map size and channel size from the input feature map
 
     Args:
-        features (tensor): feature representations of shape (H, W, C) or (C, H, W)
+        features (tensor or variable): feature representations of shape (H, W, C) or (C, H, W)
 
     Returns:
         feature map size (int: H x W) and channel size (int: C)

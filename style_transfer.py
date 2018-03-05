@@ -32,8 +32,9 @@ np.random.seed(777)
 class StyleTransfer(object):
     """Style-Transfer techniques described in the following paper: https://goo.gl/KDiquz
 
-    Differences from the original paper are marked with comments
-    which start with "! the original paper ...."
+    Note:
+        Differences from the original paper are marked with comments
+        which start with "! the original paper ...."
 
     Attributes:
         output_path (str): the directory path for outcomes.
@@ -47,9 +48,9 @@ class StyleTransfer(object):
         style_img (np.ndarray): 4D array of shape (1, H, W, 3)
         eval_fn (keras.backend.function): keras function to return training loss and gradients.
 
-    Example:
-        style_transfer = StyleTransfer(...) # initialization
-        style_transfer.fit(...) # generating images
+    Examples:
+        >>> style_transfer = StyleTransfer(...) # initialization
+        >>> style_transfer.fit(...) # generating images
     """
     def __init__(self, content_path, style_path, output_path,
                  loss_ratio=1e-3, verbose=True,
